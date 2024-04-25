@@ -49,7 +49,7 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.83_noneautotype</version>
             <scope>compile</scope>
-        </dependency>        
+        </dependency>
         <!--Other 依赖 -->
         <dependency>
             <groupId>com.aliyun.openservices</groupId>
@@ -91,6 +91,7 @@
             <!-- assembly plugin -->
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
+               <version>2.2-beta-3</version>
                 <configuration>
                     <descriptors>
                         <descriptor>src/main/assembly/package.xml</descriptor>
