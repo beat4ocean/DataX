@@ -22,7 +22,7 @@ import com.alibaba.datax.plugin.reader.otsreader.utils.ReaderModelParser;
 import com.alibaba.datax.plugin.reader.otsreader.model.OTSColumn;
 import com.alibaba.datax.plugin.reader.otsreader.utils.DefaultNoRetry;
 import com.alibaba.datax.plugin.reader.otsreader.utils.GsonParser;
-import com.alibaba.fastjson2.JSON;
+import com.alibaba.fastjson.JSON;
 import com.aliyun.openservices.ots.OTSClient;
 import com.aliyun.openservices.ots.OTSServiceConfiguration;
 import com.aliyun.openservices.ots.model.DescribeTableRequest;
