@@ -232,12 +232,12 @@ public class MongoDBReader extends Reader {
             Document filter = new Document();
             if (lowerBound.equals("min")) {
                 if (!upperBound.equals("max")) {
-                    filter.append(KeyConstant.MONGO_PRIMARY_ID, new Document("$lt", isObjectId ? new ObjectId(upperBound.toString()) : upperBound));
+                    filter.append(KeyConstant.MONGO_PRIMARY_ID, new Document("$lt", isObjectId ? new ObjectId(upperBound) : upperBound));
                 }
             } else if (upperBound.equals("max")) {
-                filter.append(KeyConstant.MONGO_PRIMARY_ID, new Document("$gte", isObjectId ? new ObjectId(lowerBound.toString()) : lowerBound));
+                filter.append(KeyConstant.MONGO_PRIMARY_ID, new Document("$gte", isObjectId ? new ObjectId(lowerBound) : lowerBound));
             } else {
-                filter.append(KeyConstant.MONGO_PRIMARY_ID, new Document("$gte", isObjectId ? new ObjectId(lowerBound.toString()) : lowerBound).append("$lt", isObjectId ? new ObjectId(upperBound.toString()) : upperBound));
+                filter.append(KeyConstant.MONGO_PRIMARY_ID, new Document("$gte", isObjectId ? new ObjectId(lowerBound) : lowerBound).append("$lt", isObjectId ? new ObjectId(upperBound) : upperBound));
             }
             if (!Strings.isNullOrEmpty(query)) {
                 Document queryFilter = Document.parse(query);
