@@ -55,7 +55,7 @@ public abstract class Column {
 	public abstract String asString();
 
 	public abstract Date asDate();
-	
+
 	public abstract Date asDate(String dateFormat);
 
 	public abstract byte[] asBytes();
@@ -72,6 +72,6 @@ public abstract class Column {
 	}
 
 	public enum Type {
-		BAD, NULL, INT, LONG, DOUBLE, STRING, BOOL, DATE, BYTES
+		BAD, NULL, INT, LONG, DOUBLE, STRING, BOOL, DATE, BYTES, ARRAY
 	}
 }
